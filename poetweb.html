@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        header{
+            width: 100%;
+            height: 100vh;
+            background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)), url("art.jpeg") ;
+        }
+        .Register button{
+            transition: 0.4s;
+        }
+        .Register button:hover{
+            background: transparent;
+            border: 1px solid darksalmon;
+        }
+        .Menu a{
+            padding: 10px 20px;
+            color: black;
+            text-decoration: none;
+            position: relative;
+        }
+        .Menu a:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            border-bottom:2px solid wheat;
+            transition: 0.4s linear;
+        }
+        .Menu a:hover:before{
+            width: 100%;
+        }
+        .txt{
+            max-width: 650px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+        }
+        .txt span{
+            letter-spacing: 5px;
+            color: aliceblue;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+        .txt h1{
+            font-size: 3.5em;
+           font-family:'Times New Roman', Times, serif;
+           color:rgb(253, 233, 233);
+        }
+        .txt a{
+            text-decoration: none ;
+            background: indianred;
+            padding: 10px 20px;
+            color: white;
+            letter-spacing: 5px;
+            transition: 0.4s;
+        }
+        .txt a:hover{
+            background: transparent;
+            border: 1px solid black;
+        }
+         .idea{
+            background: lightcoral;
+            width: 100%;
+            height: 600px;
+            position: relative;
+         }
+        .heading{
+            background:rgb(78, 78, 78);
+            background-position: center;
+            width: 100%;
+            height: 110px;
+            font-size: 2.3em;
+            color: white;
+            text-align: center;
+            font-family: cursive;
+            align-content: center;
+        }
+        .heading:hover{
+            background: rgb(44, 44, 44);
+            color: antiquewhite;
+            font-size: 2.4em;
+            text-decoration: overline;
+            text-decoration-thickness: 2px;
+        }
+        .element{
+            height: 400px;
+            width: 90%;
+            position: absolute;
+            top: 22%;
+            left: 5%;
+            overflow: auto;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .element div{
+            width: 20%;
+            height: 300px;
+            background: peachpuff;
+            text-align: center;
+            border-top-left-radius: 180px;
+            border-top-right-radius: 180px;
+            border-bottom-left-radius: 180px;
+            border-bottom-right-radius: 180px;
+        }
+        .element div:hover{
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            height: 350px;
+        }
+        .element img{
+            align-items: center;
+            opacity: 70%;
+            width: 100%;
+            height: 200px;
+            border-radius: 50%;
+        }
+        .element img:hover{
+            border-top-left-radius: 1px;
+            border-top-right-radius: 1px;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            height: 200px;
+            opacity: 100%;
+        }
+        .element span{
+            font-style: italic;
+            font-family: cursive;
+            color: rgb(93, 57, 63);
+        } 
+        .romantic{
+            width: 100%;
+            height: 600px;
+            background:linear-gradient(lightcoral,rgb(105, 75, 75));
+            position: relative;
+            display: flex;
+        }
+        .poems{
+            width: 45%;
+            height: 600px;
+            position: absolute;
+            left: 52%;
+            display: flex;
+            overflow-x: scroll;
+            scroll-behavior: smooth;
+        }
+        .read{
+            width: 45%;
+            height: 600px;
+            font-size: 2.5em;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+        }
+        .read:hover{
+            background: rgb(174, 77, 77);
+            opacity: calc(5%);
+        }
+        .read p{
+            font-size: large;
+            font-family: cursive;
+            color: rgb(234, 214, 188);
+        }
+        .read span{
+            font-size: 0.8em ;
+            color: rgb(253, 170, 68);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .writting{
+            width: 100%;
+            height: 900px;
+            background:rgb(105, 75, 75) ;
+            font-size: 3em;
+            font-family: 'Times New Roman', Times, serif;
+            text-decoration:underline;
+            font-style: italic;
+            color: rgb(53, 53, 53);
+            text-align: center;
+            position: relative;
+        }
+        .writting p{
+            background: linen;
+        }
+        textarea{
+            position: absolute;
+            left: 15%;
+            width: 70%;
+            height: 400px;
+            font-size: large;
+        }
+        .writting button{
+            position: absolute;
+            top: 70%;
+            right: 45%;
+            width: 10%;
+            height: 50px;
+            background: rgb(117, 47, 47);
+            transition: 1.4s;
+        }
+        .writting button:hover{
+            background: transparent;
+            border:2px solid rgb(53, 40, 40);
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <nav>
+    <div style="background-color: lightcoral;width: 100%;height: 100pxl; display: flex; justify-content: space-around;align-items: center;">
+        
+            <div class="logo">
+                <input type="image" src="Screenshot (81).png" height="100pxl"> 
+            </div>
+            
+            <div class="Menu" style="display: flex;display: inline-block;justify-content: space-around;text-align: center;">
+                
+                <a  href="">Home</a>
+                <a  href="">Ideas</a>
+                <a  href="">WritingSpace</a>
+                <a  href="">Account</a>
+                <div class="Title" style="text-align: center;color: wheat;font-family:Georgia, 'Times New Roman', Times, serif">
+                    <caption><b><h1 style="font-size:xx-large;">bulgthoughts</h1></b></caption>
+                    <caption><h4>"Share Your Thoughts To Eternity"</h4></caption>
+                </div>
+            </div>
+            <div class="Register" style="display: flex ; display: inline-block;">
+                <a href="http://127.0.0.1:5500/form3.html?"><button style="background-color: darksalmon;color: black;">Register</button></a>
+                <a href="http://127.0.0.1:5500/form4.html?" ><button style="background-color: darksalmon;color: black;">Login</button></a> 
+            </div>   
+    </div>
+    </nav> 
+    <section class="txt">
+        <span>put down your <b><i>thoughts...</i></b></span>
+        <h1>Plateform for Poets</h1>
+        <br>
+        <a href="">Write</a>
+    </section>
+    </header>
+    <div class="idea">
+        <div class="heading">
+            Get Ideas here..
+        </div>
+        <div class="element">
+            <div class="a">
+                <a href="https://artincontext.org/epic-poetry/"><img src="epic.jpeg"></a>
+                <span>Click on the image to view</span>
+            </div>
+            <div class="b">
+                <a href="https://www.familyfriendpoems.com/collection/narrative-poems/"><img src="narrative.jpeg"></a>
+                <span>Click on the image to view</span>
+            </div>
+            <div class="c">
+                <a href="https://poemanalysis.com/genre/lyric-poems/"><img src="lyric.jpeg"></a>
+                <span>Click on the image to view</span>
+            </div>
+            <div class="d">
+                <a href="https://www.storyboardthat.com/genres/dramatic-poetry"><img src="dramatic.jpeg"></a>
+                <span>Click on the image to view</span>
+            </div>
+        </div>
+    </div>
+    <div class="romantic">
+        <div class="read">
+            Romanticism:
+            <p> Romanticism was at its peak from approximately 1800 to 1850. 
+                The first Romantic ideas arose from an earlier German Counter-Enlightenment movement called Sturm und Drang.
+                Romanticism was characterized by its emphasis on emotion and individualism 
+                as well as the glorification of the past and nature, preferring the medieval over the classical.
+            </p>
+            <p>
+                Romanticism was characterized by its emphasis on emotion and individualism as well as the glorification of the past and nature, preferring the medieval over the classical.
+            </p>
+            <p>Romanticism in English literature began in the 1790s with the publication of the Lyrical Ballads of William Wordsworth and Samuel Taylor Coleridge.</p><br>
+            <span>“Poetry is the spontaneous overflow of powerful feelings: it takes its origin from emotion recollected in tranquility.”  
+                - William Wordsworth</span>
+        </div>
+        <div class="poems">
+            <img src="r7.jpeg" width="100%" height="600px">
+            <img src="r8.jpeg" width="100%" height="600px">
+            <img src="r9.jpeg" width="100%" height="600px">
+            <img src="r10.jpeg" width="100%" height="600px">
+            <img src="r1.jpeg" width="100%" height="600px">
+            <img src="r2.jpeg" width="100%" height="600px" >
+            <img src="r3.jpeg" width="100%" height="600px">
+            <img src="r4.jpeg" width="100%" height="600px">
+            <img src="r5.jpeg" width="100%" height="600px">
+            <img src="r6.jpeg" width="100%" height="600px">
+        </div>
+    </div>
+    <div class="writting">
+        <br>
+       <p>Writing space</p> 
+        <textarea></textarea>
+        <button>Save</button>
+    </div>
+</body>
+</html>
